@@ -42,4 +42,8 @@ public class EmployeeServiceImpl {
         }
         return null;
     }
+
+    public void removeEmployee(Long employeeId) {
+        employeeRepository.deleteById(employeeId);
+    }
 }
