@@ -33,7 +33,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> updateEmployee(@PathVariable Long employeeId, @RequestBody Employee employee){
         return new ResponseEntity<>(employeeService.updateEmployee(employeeId, employee), HttpStatus.OK);
     }
-    @DeleteMapping("/employeeId")
+    @DeleteMapping("/{employeeId}")
     public void removeEmployee(@PathVariable Long employeeId){
         employeeService.removeEmployee(employeeId);
     }

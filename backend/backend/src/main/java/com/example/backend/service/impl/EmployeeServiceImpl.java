@@ -38,7 +38,7 @@ public class EmployeeServiceImpl {
             updateEmployee.setFirstName(employee.getFirstName());
             updateEmployee.setLastName(employee.getLastName());
             updateEmployee.setEmail(employee.getEmail());
-            return  updateEmployee;
+            return employeeRepository.save(updateEmployee);
         }
         return null;
     }
